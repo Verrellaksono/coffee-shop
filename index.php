@@ -35,10 +35,10 @@
                                 <a class="nav-link" href="admin.php">Tambah Menu</a>
                             </li>
                         <?php } ?>
-                        <a href="logout.php" class="btn btn-sm btn-danger btn-large d-md-none d-block btn-lg">Logout</a>
+                        <a href="logout.php" class="btn btn-danger btn-sm d-block d-lg-none">Logout</a>
                     </ul>
                 </div>
-                <a href="logout.php" class="btn btn-sm btn-danger btn-large d-md-block d-none">Logout</a>
+                <a href="logout.php" class="btn btn-sm btn-danger btn-large d-none d-lg-block">Logout</a>
             </div>
         </nav>
         <!-- NAVBAR END -->

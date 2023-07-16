@@ -14,7 +14,7 @@
 <body style="background-color: #C38154;">
     <div class="container">
         <div class="row mt-3">
-            <div class="col-4">
+            <div class="col-12 col-md-6 col-xl-4">
                 <h2 class="text-light">Tambah Data Menu</h2>
                 <form action="koneksi.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
@@ -35,6 +35,7 @@
                     </div>
                     <div class="form-group mt-3">
                         <input type="submit" name="simpan" value="Simpan" class="form-control btn text-light" style="background-color: #884A39;" required>
+                        <a href="admin.php" class="btn btn-outline-light w-100 mt-2">Kembali</a>
                     </div>
                 </form>
             </div>

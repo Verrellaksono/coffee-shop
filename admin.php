@@ -29,10 +29,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="admin.php">Tambah Menu</a>
                     </li>
-                    <a href="logout.php" class="btn btn-sm btn-danger btn-large d-md-none d-block">Logout</a>
+                    <a href="logout.php" class="btn btn-danger btn-sm d-block d-lg-none">Logout</a>
                 </ul>
             </div>
-            <a href="logout.php" class="btn btn-sm btn-danger btn-large d-md-block d-none">Logout</a>
+            <a href="logout.php" class="btn btn-sm btn-danger btn-large d-none d-lg-block">Logout</a>
         </div>
     </nav>
     <!-- NAVBAR END -->
@@ -55,14 +55,24 @@
         <div class="row mt-3">
             <div class="col">
                 <?php
-                if (isset($_GET['pesan'])) {
-                    if ($_GET['pesan'] === 'berhasil') { ?>
+                if (isset($_GET['tambahData'])) {
+                    if ($_GET['tambah'] === 'berhasil') { ?>
                         <div class="alert alert-success" role="alert">
                             Data Berhasil Ditambahkan!
                         </div>
-                    <?php } elseif ($_GET['pesan'] === 'gagal') { ?>
+                    <?php } else { ?>
                         <div class="alert alert-danger" role="alert">
                             Ekstensi Gambar yang di upload tidak diperbolehkan (diharuskan .png/.jpg)
+                        </div>
+                    <?php } ?>
+                    <?php } elseif (isset($_GET['editData'])) {
+                    if ($_GET['editData'] === 'berhasil') { ?>
+                        <div class="alert alert-success" role="alert">
+                            Data Berhasil Diedit!
+                        </div>
+                    <?php } else { ?>
+                        <div class="alert alert-danger" role="alert">
+                            Data Gagal Diedit!
                         </div>
                     <?php } ?>
                 <?php } ?>

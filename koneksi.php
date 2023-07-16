@@ -36,6 +36,20 @@ if (isset($_POST['edit'])) {
     $desk = $_POST['desk'];
     $harga = $_POST['harga'];
 
-    $koneksi->query("UPDATE menus SET namaMenu = '$namaMenu', desk = '$desk', harga = '$harga' WHERE idMenu = '$idMenu'");
-    header("location:admin.php");
+    // Upload Gambar
+    $ekstensi_diperbolehkan = array('png', 'jpg');
+    $nama = $_FILES['gambar']['name'];
+    $x = explode('.', $nama);
+    $ekstensi = strtolower(end($x));
+    $file_tmp = $_FILES['gambar']['tmp_name'];
+
+    // Mengecek Extensi Gambar
+    if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
+        move_uploaded_file($file_tmp, 'assets/uploads/' . $nama);
+        $koneksi->query("UPDATE menus SET namaMenu = '$namaMenu', desk = '$desk', gambar = '$nama', harga = '$harga' WHERE idMenu = '$idMenu'");
+
+        header("location:admin.php?editData=berhasil");
+    } else {
+        header("location:admin.php?editData=gagal");
+    }
 }

@@ -12,7 +12,7 @@
 
 <body style="height:100vh">
     <div class="h-100 d-flex justify-content-center align-items-center" style="background-image: url('assets/img/pexels-emre-can-acer-2079438.jpg'); background-repeat: no-repeat; background-size: cover;">
-        <div class="col-10 col-md-6 col-lg-3">
+        <div class="col-10 col-md-6 col-lg-4 col-xl-3">
             <div class="card shadow">
                 <div class="card-body py-4">
                     <?php

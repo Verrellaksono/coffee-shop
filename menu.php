@@ -34,23 +34,23 @@
                             <a class="nav-link" href="admin.php">Tambah Menu</a>
                         </li>
                     <?php } ?>
-                    <a href="logout.php" class="btn btn-sm btn-danger btn-large d-md-none d-block">Logout</a>
+                    <a href="logout.php" class="btn btn-danger btn-sm d-block d-lg-none ">Logout</a>
                 </ul>
             </div>
-            <a href="logout.php" class="btn btn-sm btn-danger btn-large d-md-block d-none">Logout</a>
+            <a href="logout.php" class="btn btn-sm btn-danger btn-large d-none d-lg-block">Logout</a>
         </div>
     </nav>
     <!-- NAVBAR END -->
 
     <main>
         <div class="container">
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <?php
                 include 'koneksi.php';
                 $panggil = $koneksi->query("SELECT * FROM menus");
                 while ($row = $panggil->fetch_assoc()) { ?>
-                    <div class="col-md-4 col-lg-3 col-12">
-                        <div class="card">
+                    <div class="col-10 offset-1 col-md-4 offset-md-0 col-lg-3">
+                        <div class="card mt-3">
                             <img src="assets/uploads/<?= $row['gambar'] ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $row['namaMenu'] ?></h5>
